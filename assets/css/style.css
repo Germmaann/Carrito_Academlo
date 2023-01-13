@@ -12,6 +12,143 @@
   * END TABLE CONTENT *  
 ==============================
 */
+.float{
+	position:fixed;
+	width:60px;
+	height:60px;
+	bottom:40px;
+	right:40px;
+	background-color:#25d366;
+	color:#FFF;
+	border-radius:50px;
+	text-align:center;
+  font-size:30px;
+	box-shadow: 2px 2px 3px #999;
+  z-index:100;
+}
+.float:hover {
+	text-decoration: none;
+	color: #25d366;
+  background-color:#fff;
+}
+
+.my-float{
+	margin-top:16px;
+}
+
+.slide {
+  position: relative;
+  box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.64);
+  margin-top: 26px;
+}
+.slide-inner {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+.slide-open:checked + .slide-item {
+  position: static;
+  opacity: 100;
+}
+.slide-item {
+  position: absolute;
+  opacity: 0;
+  -webkit-transition: opacity 0.6s ease-out;
+  transition: opacity 0.6s ease-out;
+}
+.slide-item img {
+  display: block;
+  height: auto;
+  max-width: 100%;
+}
+.slide-control {
+  background: rgba(0, 0, 0, 0.28);
+  border-radius: 50%;
+  color: #fff;
+  cursor: pointer;
+  display: none;
+  font-size: 40px;
+  height: 40px;
+  line-height: 35px;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translate(0, -50%);
+  cursor: pointer;
+  -ms-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+  text-align: center;
+  width: 40px;
+  z-index: 10;
+}
+.slide-control.prev {
+  left: 2%;
+}
+.slide-control.next {
+  right: 2%;
+}
+.slide-control:hover {
+  background: rgba(0, 0, 0, 0.8);
+  color: #aaaaaa;
+}
+#slide-1:checked ~ .control-1,
+#slide-2:checked ~ .control-2,
+#slide-3:checked ~ .control-3 {
+  display: block;
+}
+.slide-indicador {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  bottom: 2%;
+  left: 0;
+  right: 0;
+  text-align: center;
+  z-index: 10;
+}
+.slide-indicador li {
+  display: inline-block;
+  margin: 0 5px;
+}
+.slide-circulo {
+  color: #828282;
+  cursor: pointer;
+  display: block;
+  font-size: 35px;
+}
+.slide-circulo:hover {
+  color: #aaaaaa;
+}
+#slide-1:checked ~ .control-1 ~ .slide-indicador 
+   li:nth-child(1) .slide-circulo,
+#slide-2:checked ~ .control-2 ~ .slide-indicador 
+    li:nth-child(2) .slide-circulo,
+#slide-3:checked ~ .control-3 ~ .slide-indicador 
+    li:nth-child(3) .slide-circulo {
+  color: #428bca;
+}
+#titulo {
+  width: 100%;
+  position: absolute;
+  padding: 0px;
+  margin: 0px auto;
+  text-align: center;
+  font-size: 27px;
+  color: rgba(255, 255, 255, 1);
+  font-family: 'Open Sans', sans-serif;
+  z-index: 9999;
+  text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.33), 
+  -1px 0px 2px rgba(255, 255, 255, 0);
+}
+
+html.dark .word-rotator.type .word-rotator-words.waiting::after {
+	-webkit-animation: 1s word-rotator-pulse-light step-end infinite;
+	animation: 1s word-rotator-pulse-light step-end infinite;
+}
+.word-rotator.loading-bar .word-rotator-words::after {
+	background: #2388ED;
+}
 
 /*==============================
   1. VARIABLES CSS
@@ -21,7 +158,7 @@
   /*========== COLORS ==========*/
   --first-color: #000;
   --second-color: #fff;
-  --body-color: #fff;
+  --body-color: #b1c1e1;
   --text-color: #000;
   --link-color: #000;
   --button-color: transparent;
@@ -207,7 +344,7 @@ a {
   position: fixed;
   top: 0;
   z-index: var(--z-fixed);
-  background-color: #fff;
+  background-color: #8999bb;
   box-shadow: 0px 2px 4px rgb(0, 0, 0, .08), 0px 8px 12px rgb(0, 0, 0, .04);
   transition: background .3s;
 }
@@ -232,7 +369,7 @@ a {
 @media screen and (max-width: 767px) {
   .navbar__menu {
     position: fixed;
-    background-color: #fff;
+    background-color: #8999bb;
     top: 0;
     left: -100%;
     width: 85vw;
@@ -274,7 +411,7 @@ a {
 
 /*========== HOME CONTENT ==========*/
 .home {
-  background-color: #f9f9f9;
+  background-color: #d9dfeb;
 }
 
 .home__title {
@@ -353,7 +490,7 @@ a {
 }
 
 .about {
-  background-color: #f1f1f1;
+  background-color: #99a7c3;
 }
 
 .about__img {
@@ -365,7 +502,7 @@ a {
 
 /*========== FOOTER CONTENT ==========*/
 .footer {
-  background-color: #dfdfdf;
+  background-color: #aec5f3;
   padding-bottom: var(--m-2);
 }
 

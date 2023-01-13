@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Carrito de Compras</title>
   <!--=============== FAVICON ===============-->
-  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
   <!--=============== GOOGLE FONTS ===============-->
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
@@ -27,8 +27,8 @@
   <header class="header">
     <nav class="navbar grid--container">
       <a href="#" class="navbar__logo">
-        <i class="bx bx-cart"></i>
-        <span>Carrito</span>
+        <i ></i>
+        <span>Figuras de Anime</span>
       </a>
 
       <div class="navbar__menu">
@@ -68,8 +68,43 @@
       </div>
     </nav>
   </header>
-
-  <!--=============== WISH ===============-->
+  
+  <div class="slide">
+    <div class="slide-inner">
+        <input class="slide-open" type="radio" id="slide-1" 
+              name="slide" aria-hidden="true" hidden="" checked="checked">
+        <div class="slide-item">
+            <img src="assets/img/back1.jpg">
+        </div>
+        <input class="slide-open" type="radio" id="slide-2" 
+              name="slide" aria-hidden="true" hidden="">
+        <div class="slide-item">
+            <img src="assets/img/back3.jpg">
+        </div>
+        <input class="slide-open" type="radio" id="slide-3" 
+              name="slide" aria-hidden="true" hidden="">
+        <div class="slide-item">
+            <img src="assets/img/back2.jpg">
+        </div>
+        <label for="slide-3" class="slide-control prev control-1">‹</label>
+        <label for="slide-2" class="slide-control next control-1">›</label>
+        <label for="slide-1" class="slide-control prev control-2">‹</label>
+        <label for="slide-3" class="slide-control next control-2">›</label>
+        <label for="slide-2" class="slide-control prev control-3">‹</label>
+        <label for="slide-1" class="slide-control next control-3">›</label>
+        <ol class="slide-indicador">
+            <li>
+                <label for="slide-1" class="slide-circulo">•</label>
+            </li>
+            <li>
+                <label for="slide-2" class="slide-circulo">•</label>
+            </li>
+            <li>
+                <label for="slide-3" class="slide-circulo">•</label>
+              </li>
+          </ol>
+      </div>
+  </div>
 
   <!--=============== CART ===============-->
   <section class="cart">
@@ -156,10 +191,9 @@
     <section class="home section">
       <div class="home__container grid--container">
         <div class="home__content">
-          <h1 class="home__title">Carrito de Compras</h1>
-          <p class="home__description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laboriosam eos vitae
-            cupiditate, consectetur at itaque ipsa quas rerum ex neque illum quibusdam doloribus sunt expedita suscipit
-            fuga facere fugiat veritatis.</p>
+          <h1 class="home__title">Tienda de Figuras de Anime</h1>
+          <h3>COMPRA LIBRE Y CÓMODAMENTE DESDE TU CASA</h3>
+          <p class="home__description">¡Manejamos envíos locales en compras mínimas de $599.00! Por $50.00 pesos más, tu compra llegará hasta ti sin dificultad ni Contratiempo.</p>
         </div>
         <div class="home__img">
           <img src="assets/img/all.png" alt="products">
@@ -171,9 +205,8 @@
       <div class="products__container grid--container">
         <div class="products__content">
           <h2 class="products__title">Productos</h2>
-          <p class="products__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae dolorem
-            excepturi quaerat repellat quidem soluta quos est, autem illo hic fugiat repudiandae asperiores pariatur
-            nemo numquam obcaecati? Architecto, atque accusantium!</p>
+          <h3>ATENCIÓN POR CHAT PERSONALIZADO </h3>
+          <p class="products__description">Puedes comunicarte con nosotros vía Whatsapp y Chat de Facebook para resolver tus dudas, serás atendido dentro del horario establecido.</p>
         </div>
 
         <div class="products__list">
@@ -205,13 +238,16 @@
     <section class="about section">
       <div class="about__container grid--container">
         <div class="about__content">
-          <h2 class="about__title">Nosotros</h2>
-          <p class="about__desciption">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis provident neque
-            aspernatur repellat vero ab incidunt assumenda repudiandae, quo excepturi aliquam ducimus, veritatis cumque
-            consectetur facere! Voluptatibus error voluptates consequatur!</p>
+          <h2 class="about__title">¿Quiénes somos?</h2>
+          <p class="about__desciption">Somos una empresa dedicada la cultura Pop, Anime, Coleccionables y geek.</p>
+          <h2 class="about__title">Historia:</h2>
+          <p class="about__desciption">Nos formamos como una pequeña empresa familiar. Tenemos aproximadamente más de 8 años en el negocio de Coleccionistas, Anime y Videojuegos, con todo lo que tenga que ver con la cultura Pop y Geek.</p>
+          <h2 class="about__title">Nuestro lema es:</h2>
+          <p class="about__desciption">Siempre contar con productos más Nuevos y Originales de Buena calidad, buscando asiduamente la satisfacción de nuestros clientes</p>
+
         </div>
         <div class="about__img">
-          <img src="assets/img/chef.png" alt="chef">
+          <img src="assets/img/img1.png" alt="chef">
         </div>
       </div>
     </section>
@@ -221,11 +257,12 @@
   <footer class="footer section">
     <div class="footer__container grid--container">
       <div class="footer__content">
-        <h2 class="footer__title">Carrito</h2>
-        <p class="footer__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde earum eos sequi
-          illo doloribus? Dolorem tempora vero voluptatibus rem, eum porro natus iusto hic doloribus facilis temporibus
-          excepturi quo. Ducimus!</p>
+        <h2 class="footer__title">Noticias</h2>
+        <p class="footer__description">Suscríbase a nuestra página para recibir ofertas especiales y noticias exclusivas sobre productos de Anime-Shop.</p>
       </div>
+      <input placeholder="Ingresa tu correo" style="  width: 300px; height: 50px;  background: #ffffff; font-size: 20px;">
+      <br>
+      <button style="  width: 150px; height: 50px;  background: #e798dd; font-size: 20px;">Suscríbase</button>
       <div class="footer__social">
         <a href="#" class="footer__social-icon">
           <i class="bx bxl-facebook"></i>
@@ -242,6 +279,9 @@
       </div>
     </div>
   </footer>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <a href="https://api.whatsapp.com/send?phone=524421436726&text=Hola%21%20Quisiera%20m%C3%A1s%20informaci%C3%B3n%20sobre%20Varela%202." class="float" target="_blank">
+  <i class="fa fa-whatsapp my-float"></i>
 </body>
 
 </html>
